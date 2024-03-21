@@ -28,14 +28,12 @@ jobs:
     # Generates the snake  
       - uses: Platane/snk@master
         id: snake-gif
-        env:
-          # Set environment variables for output paths
-          GIF_OUT_PATH: dist/github-contribution-grid-snake.gif
-          SVG_OUT_PATH: dist/github-contribution-grid-snake.svg
         with:
           github_user_name: rumdien113
-          gif_out_path: GIF_OUT_PATH
-          svg_out_path: SVG_OUT_PATH
+        env:
+          # Set environment variables for output paths
+          gif_out_path: dist/github-contribution-grid-snake.gif
+          svg_out_path: dist/github-contribution-grid-snake.svg
     
      # show the status of the build. Makes it easier for debugging (if there's any issues).
       - run: git status
