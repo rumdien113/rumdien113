@@ -26,14 +26,13 @@ jobs:
       - uses: actions/checkout@v4
 
     # Generates the snake  
-      - uses: Platane/snk@master
-        id: snake-gif
-        env:
-          # Set environment variables for output paths
-          GIF_OUT_PATH: dist/github-contribution-grid-snake.gif
-          SVG_OUT_PATH: dist/github-contribution-grid-snake.svg
+      - uses: Platane/snk@v3
         with:
           github_user_name: rumdien113
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
+            dist/ocean.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
     
      # show the status of the build. Makes it easier for debugging (if there's any issues).
       - run: git status
